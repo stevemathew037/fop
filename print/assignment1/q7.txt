@@ -1,0 +1,42 @@
+Name     : STEVE MATHEW
+Roll No  : 32
+Subject  : FOP
+Course   : PGDCA
+
+ASSIGNMENT-1
+
+Q7)Write a program to determine given number is prime or not.
+
+CODE:
+#include <stdio.h>
+
+int main() {
+    int n, i, isPrime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1) {
+        isPrime = 0;
+    } else {
+        for (i = 2; i <= n / 2; ++i) {
+            if (n % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime)
+        printf("%d is a prime number.\n", n);
+    else
+        printf("%d is not a prime number.\n", n);
+
+    return 0;
+}
+
+OUTPUT:
+Enter a number: 89
+89 is a prime number.
+
+--------------------------------

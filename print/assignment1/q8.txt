@@ -1,0 +1,37 @@
+Name     : STEVE MATHEW
+Roll No  : 32
+Subject  : FOP
+Course   : PGDCA
+
+ASSIGNMENT-1
+
+Q8)Write a program to reverse a given number and display the sum of all digits.
+
+CODE:
+#include <stdio.h>
+
+int main() {
+    int num, reverse = 0, digit, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        digit = num % 10;         
+        reverse = reverse * 10 + digit; 
+        sum += digit;            
+        num /= 10;             
+    }
+
+    printf("Reversed number: %d\n", reverse);
+    printf("Sum of digits: %d\n", sum);
+
+    return 0;
+}
+
+OUTPUT:
+Enter a number: 69
+Reversed number: 96
+Sum of digits: 15
+
+--------------------------------

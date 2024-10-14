@@ -1,0 +1,38 @@
+Name     : STEVE MATHEW
+Roll No  : 32
+Subject  : FOP
+Course   : PGDCA
+
+ASSIGNMENT-1
+
+Q5)Write a program that accept basic, HRA, and DA from the user and calculate total salary.
+
+CODE:
+#include <stdio.h>
+
+int main() {
+    float basic, hra, da, totalSalary;
+
+    printf("Enter the basic salary: ");
+    scanf("%f", &basic);
+
+    printf("Enter the HRA: ");
+    scanf("%f", &hra);
+
+    printf("Enter the DA: ");
+    scanf("%f", &da);
+
+    totalSalary = basic + hra + da;
+
+    printf("Total Salary: %.2f\n", totalSalary);
+
+    return 0;
+}
+
+OUTPUT:
+Enter the basic salary: 69000
+Enter the HRA: 55
+Enter the DA: 45
+Total Salary: 69100.00
+
+--------------------------------

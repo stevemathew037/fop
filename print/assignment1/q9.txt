@@ -1,0 +1,62 @@
+Name     : STEVE MATHEW
+Roll No  : 32
+Subject  : FOP
+Course   : PGDCA
+
+ASSIGNMENT-1
+
+Q9)Write a program to accept two numbers and perform basic operation of calculator
+(+,-,*,/).(Use switch...case)
+
+CODE:
+#include <stdio.h>
+
+int main() {
+    float num1, num2, result;
+    char opertor;
+
+    printf("Enter first number: ");
+    scanf("%f", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+    
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &opertor);
+
+    switch (opertor) {
+        case '+':
+            result = num1 + num2;
+            printf("%.2f + %.2f = %.2f\n", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%.2f - %.2f = %.2f\n", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%.2f * %.2f = %.2f\n", num1, num2, result);
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("%.2f / %.2f = %.2f\n", num1, num2, result);
+            } else {
+                printf("Error: Division by zero is not allowed.\n");
+            }
+            break;
+        default:
+            printf("Error: Invalid operator.\n");
+            break;
+    }
+
+    return 0;
+}
+
+OUTPUT:
+Enter first number: 36
+Enter second number: 56
+Enter operator (+, -, *, /): *
+36.00 * 56.00 = 2016.00
+
+--------------------------------

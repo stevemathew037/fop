@@ -1,0 +1,40 @@
+Name     : STEVE MATHEW
+Roll No  : 32
+Subject  : FOP
+Course   : PGDCA
+
+ASSIGNMENT-2
+
+Q16)Write a recursive function for finding the factorial of a number.
+
+CODE:
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        printf("Factorial of %d is %d\n", number, factorial(number));
+    }
+
+    return 0;
+}
+
+OUTPUT:
+Enter a number: 3
+Factorial of 3 is 6
+
+--------------------------------

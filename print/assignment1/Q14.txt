@@ -1,0 +1,46 @@
+Name     : STEVE MATHEW
+Roll No  : 32
+Subject  : FOP
+Course   : PGDCA
+
+ASSIGNMENT-2
+
+Q14)Write a program that will read a text and count all occurrences of a particular character using function.
+
+CODE:
+#include <stdio.h>
+
+int count_occurrences(const char *text, char character) {
+    int count = 0;
+    while (*text) {
+        if (*text == character) {
+            count++;
+        }
+        text++;
+    }
+    return count;
+}
+
+int main() {
+    char text[1000];
+    char character;
+    
+    printf("Enter a text: ");
+    fgets(text, sizeof(text), stdin);
+    
+    printf("Enter the character to count: ");
+    scanf("%c", &character);
+
+    int occurrences = count_occurrences(text, character);
+    
+    printf("Occurrences of '%c': %d\n", character, occurrences);
+    
+    return 0;
+}
+
+OUTPUT:
+Enter a text: The Pursuit of Happyness
+Enter the character to count: e
+Occurrences of 'e': 2
+
+--------------------------------
